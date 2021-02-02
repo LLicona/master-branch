@@ -2,6 +2,8 @@
 global with sharing class SecureApexRest {
     @HttpGet
        global static Contact doGet(){
+        
+        System.debug('HACIENDO CAMBIO DESDE VS CODE');
         Id recordId = RestContext.request.params.get('id');
         Contact result;
         if (recordId == null){

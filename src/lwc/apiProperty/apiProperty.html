@@ -1,0 +1,10 @@
+<template>
+    <!-- THE  lightning-card is only for background white-->
+    <lightning-card title="">
+    <div class="slds-m-around_medium">
+        <lightning-input label="Percentage" type="number" min="0" max="100"
+            value={percentage} onchange={handlePercentageChange}></lightning-input>
+        <c-chart-bar percentage={percentage}></c-chart-bar>
+    </div>
+    </lightning-card>
+</template>

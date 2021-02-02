@@ -1,0 +1,50 @@
+<template>
+    <lightning-card title="ApexWireMethodWithParams" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search"
+                             onchange={handleKeyChange}
+                             class="slds-m-bottom_small"
+                             label="Search"
+                             value={searchKey}>
+            </lightning-input>
+            
+            <template if:true={contacts}>
+                <table class="slds-table slds-table_striped slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-text-title--caps">
+                                <th scope="col">
+                                    <div class="slds-truncate">Name</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Title</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate">Teléfono</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={contacts} for:item="contact">  
+                                <tr key={contact.Id}>
+                                    <td data-label="Name">
+                                        <div class="slds-truncate" title={contact.Name}>{contact.Name}</div>
+                                    </td>
+                                    <td data-label="Title">
+                                        <div class="slds-truncate" title={contact.Title}>{contact.Title}</div>
+                                    </td>
+                                    <td data-label="Phone">
+                                        <div class="slds-truncate" title={contact.Phone}>{contact.Phone}</div>
+                                    </td>
+                                </tr>
+                                    <!-- <c-component-with-apex-table key={contact.Id} contact={contact}></c-component-with-apex-table>      -->   
+                            </template>
+                        </tbody>
+                    </table>
+            </template>
+            <template if:true={error}>
+                <p>No se encontraron resultados</p>
+                <p>{error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

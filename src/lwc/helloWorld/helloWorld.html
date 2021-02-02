@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="">
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" name="firstName" value={firstName} onchange={handleChange}></lightning-input>
+            <lightning-input label="Last Name" name="lastName" value={lastName} onchange={handleChange2}></lightning-input>
+            <p class="slds-m-top_medium"> !Hello {firstName} {lastName}</p>
+        </div>
+        <div class="slds-m-around_medium">
+            <p>object prop: {x.a}</p>
+            <p>object prop: {x.b}</p>
+            <br/>
+            <lightning-button label="Init" onclick={init} class="slds-m-left_x-small"></lightning-button>
+            <lightning-button label="Update" onclick={update} class="slds-m-left_x-small" variant="brand"></lightning-button>
+        </div>
+        <div></div>
+    </lightning-card>
+</template>

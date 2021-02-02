@@ -1,0 +1,23 @@
+<template>
+    <div class="slds-m-around_medium">
+        <lightning-tabset>
+            <lightning-tab label="Formulario">
+                <c-record-form-children item-fields={itemFields} record-id={recordId} object-api-name={objectApiName}></c-record-form-children>
+            </lightning-tab>
+            <lightning-tab label="Barra">
+                <c-api-property></c-api-property>
+            </lightning-tab>
+            <template if:true={showTabTwo}>
+                <lightning-tab label="Hola Mundo">
+                    <c-hello-world></c-hello-world>
+                </lightning-tab>
+            </template>
+            <lightning-tab label="APEX">
+                <c-component-with-apex record-id={recordId}></c-component-with-apex>
+            </lightning-tab>
+            <lightning-tab label="APEX IMPERATIVE">
+                <c-apex-imperative-method record-id={recordId}></c-apex-imperative-method>
+            </lightning-tab>
+        </lightning-tabset>
+    </div>
+</template>

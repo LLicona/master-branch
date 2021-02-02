@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <lightning:card footer="" title="">
+<!--    <force:recordView recordId="{!v.recordId}"/> -->
+    <force:recordEdit aura:id="edit" recordId="{!v.recordId}"/>
+    <div align="center">
+    	<lightning:button label="Save" onclick="{!c.save}"/>
+    </div>
+    </lightning:card>
+</aura:component>

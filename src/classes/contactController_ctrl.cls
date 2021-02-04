@@ -3,6 +3,7 @@ public with sharing class contactController_ctrl {
     public static Contact[] getContactList(){
         System.debug('HACIENDO CAMBIO DESDE VS CODE en future-Developer Local');
         System.debug('HACIENDO CAMBIO DESDE VS CODE en future-Developer Local 2');
+        System.debug('HACIENDO CAMBIO DESDE VS CODE en future-Developer github');
         return [SELECT Id, Name, Title,Phone, Email FROM Contact LIMIT 5];
     }
 

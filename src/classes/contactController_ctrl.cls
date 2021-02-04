@@ -2,6 +2,7 @@ public with sharing class contactController_ctrl {
     @AuraEnabled(cacheable=true)
     public static Contact[] getContactList(){
         System.debug('HACIENDO CAMBIO DESDE VS CODE en future-Developer Local');
+        System.debug('HACIENDO CAMBIO DESDE VS CODE en future-Developer Local 2');
         return [SELECT Id, Name, Title,Phone, Email FROM Contact LIMIT 5];
     }
 
